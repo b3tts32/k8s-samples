@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: guestbook-ui
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+    - host: guestbook.localhost
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: guestbook-ui
+              servicePort: 80

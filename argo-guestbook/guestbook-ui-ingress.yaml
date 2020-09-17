@@ -6,7 +6,7 @@ metadata:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    - host: guestbook-hello.localhost
+    - host: guestbook.localhost
       http:
         paths:
           - path: /
